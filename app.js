@@ -24,7 +24,7 @@ var namMember = new Array(
 "Tanaka Yuyuko",
 "Ootsuki Aruru",
 "Kanou Misora",
-"Nonomiyua Lalafin",
+"Nonomiya Lalafin",
 "Ebisu Tsukasa",
 "Kochou Shizuha",
 "Yukishiro Akira",
