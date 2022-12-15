@@ -103,68 +103,41 @@ table{
 #leftField{
 	border: 1px solid #888888;
 	background:#fff;
-	width:33%;
 }
 #rightField{
 	border: 1px solid #888888;
 	background:#fff;
-	width:33%;
 }
 .middleField{
 	height: 70px;
-	width:33%;
 	border: 1px solid #888888;
 	background:#fff;
 }
-#mainTableaq{
-	font-size: 12px;
-	font-family: 'verdana',sans-serif;
-	text-align: center;
-	vertical-align: middle;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	border-collapse: separate;
-}
-#leftFieldaq{
+.extraOptions{
+	height: 30px;
 	border: 1px solid #888888;
 	background:#fff;
-	width:33%;
 }
-#rightFieldaq{
+.instructions{
+	height: 30px;
 	border: 1px solid #888888;
 	background:#fff;
-	width:33%;
 }
-.middleFieldaq{
+#leftField:hover{
+	border: 1px solid #888888;
+	background:#e1ebff;
+}
+#rightField:hover{
+	border: 1px solid #888888;
+	background:#e1ebff;
+}
+.middleField:hover{
 	height: 70px;
-	width:33%;
 	border: 1px solid #888888;
-	background:#fff;
+	background:#e1ebff;
 }
-#mainTablePDP{
-	font-size: 12px;
-	font-family: 'verdana',sans-serif;
-	text-align: center;
-	vertical-align: middle;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	border-collapse: separate;
-}
-#leftFieldPDP{
+.extraOptions:hover{
+	height: 30px;
 	border: 1px solid #888888;
-	background:#fff;
-	width:33%;
-}
-#rightFieldPDP{
-	border: 1px solid #888888;
-	background:#fff;
-	width:33%;
-}
-.middleFieldPDP{
-	height: 70px;
-	width:33%;
-	border: 1px solid #888888;
-	background:#fff;
+	background:#e1ebff;
 }

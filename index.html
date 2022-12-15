@@ -12,18 +12,36 @@
     
     <h2>Revue Starlight Characters Sorter</h2>
     <table id="mainTable" align="center">
-        <tbody><tr>
-    
-            <td id="battleNumber" colspan="3" style="padding-bottom: 10px;" style="text-align:center;">Question No.1<br>0% sorted.</td>
+        <tbody>
+            <tr>    
+                <td class="instructions" colspan="5" style="padding-bottom: 10px;padding-top: 10px;" style="text-align:center;">Feel free to customize your characters list using the buttons below.<br>
+                <b>Important note:</b> any click on a button will reset your sorting progress. Start sorting only after you finished customizing your list!</td>
+            </tr>
+            <tr>
+                <td class="extraOptions" onclick="resetList();resetVars();initList();showImage();" style="text-align:center;">Reset list to default (32 characters)</td>
+                <td class="extraOptions" onclick="addCharas('elle');resetVars();initList();showImage();" style="text-align:center;">Add Elle</td>
+                <td class="extraOptions" onclick="addCharas('young');resetVars();initList();showImage();" style="text-align:center;">Add stage play charachters (young)</td>
+                <td class="extraOptions" onclick="addCharas('adult');resetVars();initList();showImage();" style="text-align:center;">Add stage play charachters (adult)</td>
+                <td class="extraOptions" onclick="removeSchool('seisho');resetVars();initList();showImage();" style="text-align:center;">Remove Seisho</td>
+            </tr>
+            <tr>
+                <td class="extraOptions" onclick="removeSchool('rmk');resetVars();initList();showImage();" style="text-align:center;">Remove Rinmeikan</td>
+                <td class="extraOptions" onclick="removeSchool('frontier');resetVars();initList();showImage();" style="text-align:center;">Remove Frontier</td>
+                <td class="extraOptions" onclick="removeSchool('edels');resetVars();initList();showImage();" style="text-align:center;">Remove Siegfeld (Edels)</td>
+                <td class="extraOptions" onclick="removeSchool('juniors');resetVars();initList();showImage();" style="text-align:center;">Remove Siegfeld (Juniors)</td>
+                <td class="extraOptions" onclick="removeSchool('seiran');resetVars();initList();showImage();" style="text-align:center;">Remove Seiran</td>
+            </tr>
+        <tr>    
+            <td id="battleNumber" colspan="5" style="padding-bottom: 10px;padding-top: 10px;" style="text-align:center;">Question No.1<br>0% sorted.</td>
         </tr>
         <tr>
-            <td id="leftField" onclick="if(finishFlag==0)sortList(-1);" rowspan="2" style="text-align:center;"></td>
+            <td id="leftField" onclick="if(finishFlag==0)sortList(-1);" colspan="2" rowspan="2" style="text-align:center;"></td>
             <td class="middleField" onclick="if(finishFlag==0)sortList(0);" style="text-align:center;">
     
                 I Like Both
             </td>
     
-            <td id="rightField" onclick="if(finishFlag==0)sortList(1);" rowspan="2"style="text-align:center;"></td>
+            <td id="rightField" onclick="if(finishFlag==0)sortList(1);" colspan="2" rowspan="2"style="text-align:center;"></td>
         </tr>
         <tr>
             <td class="middleField" onclick="if(finishFlag==0)sortList(0);"style="text-align:center;">

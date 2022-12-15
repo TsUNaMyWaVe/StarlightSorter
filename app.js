@@ -1,13 +1,70 @@
-//*********************************************************
-//
-// Please feel free to add to this list.
-//
-// You can change names in the list.
-// I wrote names in quotation marks, and separated them with commmas.
-// Please don't put a comma at the end though.
-//
-//*********************************************************
-var namMember = new Array(
+var Seisho = new Array(
+    "Aijou Karen",
+    "Kagura Hikari",
+    "Tsuyuzaki Mahiru",
+    "Saijou Claudine",
+    "Tendo Maya",
+    "Hoshimi Junna",
+    "Daiba Nana",
+    "Isurugi Futaba",
+    "Hanayagi Kaoruko"
+);
+
+var Rinmeikan = new Array(
+    "Tomoe Tamao",
+    "Otonashi Ichie",
+    "Yumeoji Fumi",
+    "Akikaze Rui",
+    "Tanaka Yuyuko"
+);
+
+var Frontier = new Array(
+    "Ootsuki Aruru",
+    "Kanou Misora",
+    "Nonomiya Lalafin",
+    "Ebisu Tsukasa",
+    "Kochou Shizuha"
+);
+
+var Edels = new Array(
+    "Yukishiro Akira",
+    "Ootori Michiru",
+    "Liu Mei Fan",
+    "Yumeoji Shiori",
+    "Tsuruhime Yachiyo"
+);
+
+var Juniors = new Array(
+    "Takachiho Stella",
+    "Oogami Shiro",
+    "Kobato Ryoko",
+    "Umibe Minku",
+    "Moriyasu Kuina"
+);
+
+var Seiran = new Array(
+    "Yanagi Koharu",
+    "Minase Suzu",
+    "Honami Hisame"
+);
+
+var spAdult = new Array(
+    "Souda Sawa",
+    "Yakumo Kyoko",
+    "Saikawa Kuroumi"
+);
+
+var spYoung = new Array(
+    "Yanagi Sakura",
+    "Hanare Yatsuki",
+    "Matsue Miko",
+    "Shirahane Layla",
+    "Shindo Namie",
+    "Ajia Sui",
+    "Mitsuobi Aruma"
+);
+
+var initialList = new Array(
 "Aijou Karen",
 "Kagura Hikari",
 "Tsuyuzaki Mahiru",
@@ -43,6 +100,7 @@ var namMember = new Array(
 );
 //*********************************************************
 
+var namMember = initialList;
 var lstMember = new Array();
 var parent = new Array();
 var equal = new Array();
@@ -279,4 +337,78 @@ function toNameFace(n){
     }
     */
     return str;
+}
+
+//*********************************************************
+// List changes utils
+
+function resetVars() {
+    lstMember = new Array();
+    parent = new Array();
+    equal = new Array();
+    rec = new Array();
+    cmp1 = undefined;
+    cmp2 = undefined;
+    head1 = undefined;
+    head2 = undefined;
+    nrec = undefined;
+
+    numQuestion = undefined;
+    totalSize = undefined;
+    finishSize = undefined;
+    finishFlag = undefined;
+}
+
+function resetList(){
+    namMember = initialList;
+}
+
+function removeSchool(school){
+    var schoolToRemove = [];
+    switch(school) {
+        case 'seisho':
+            schoolToRemove = schoolToRemove.concat(Seisho);
+            break;
+        case 'rmk':
+            schoolToRemove = schoolToRemove.concat(Rinmeikan);
+            break;
+        case 'frontier':
+            schoolToRemove = schoolToRemove.concat(Frontier);
+            break;
+        case 'edels':
+            schoolToRemove = schoolToRemove.concat(Edels);
+            break;
+        case 'juniors':
+            schoolToRemove = schoolToRemove.concat(Juniors);
+            break;
+        case 'seiran':
+            schoolToRemove = schoolToRemove.concat(Seiran);
+            break;
+    }
+
+    namMember = namMember.filter((value) => {
+        return !schoolToRemove.includes(value)
+    })
+    if (namMember.length === 0) {
+        namMember = initialList;
+    }
+}
+
+function addCharas(charas){
+    var charasToAdd = [];
+    switch(charas){
+        case 'elle':
+            charasToAdd.push("Elle");
+            break;
+        case 'young':
+            charasToAdd = charasToAdd.concat(spYoung);
+            break;
+        case 'adult':
+            charasToAdd = charasToAdd.concat(spAdult);
+            break;    
+    }
+
+    if (!namMember.includes(charasToAdd[0])){
+        namMember = namMember.concat(charasToAdd);
+    }
 }
